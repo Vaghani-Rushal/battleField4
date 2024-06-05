@@ -32,7 +32,7 @@ module.exports = {
   fetchOne: async (req, res, next) => {
     try {
       const id = req.params.id;
-      const listData = await usersModel.findOne({ _id }, { __v: 0 });
+      const listData = await listModel.findOne({ _id: id }, { __v: 0 });
 
       res.status(201).json({
         success: true,
